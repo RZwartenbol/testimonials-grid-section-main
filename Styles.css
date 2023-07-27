@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  background-color: rgb(236, 242, 248);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+
+  /* To center the content on the screen */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+}
+
+.hero--grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 3rem;
+  row-gap: 3rem;
+  width: 120rem;
+  margin: 3rem;
+}
+
+.hero--container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem;
+  border-radius: 0.8rem;
+}
+
+.hero--1 {
+  grid-column: 1 / 3;
+  background-color: rgb(117, 65, 200);
+  position: relative;
+  z-index: -2;
+}
+
+.hero--2 {
+  background-color: rgb(72, 85, 106);
+}
+
+.hero--3 {
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+  background-color: rgb(255, 255, 255);
+}
+
+.hero--4 {
+  background-color: rgb(255, 255, 255);
+}
+
+.hero--5 {
+  grid-column: 2 / 4;
+  background-color: rgb(25, 33, 46);
+}
+
+.hero--text-gray {
+  color: rgb(236, 242, 248);
+}
+
+.hero--text-gray-50 {
+  color: rgba(236, 242, 248, 0.5);
+}
+
+.hero--text-gray-70 {
+  color: rgba(236, 242, 248, 0.7);
+}
+
+.hero--text-blue {
+  color: rgb(72, 85, 106);
+}
+
+.hero--text-blue-50 {
+  color: rgba(72, 85, 106, 0.5);
+}
+
+.hero--text-blue-70 {
+  color: rgba(72, 85, 106, 0.7);
+}
+
+.hero--img-name-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.hero--img {
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+}
+
+.hero--img-border {
+  border: 2px solid rgb(145, 103, 211);
+}
+
+.hero--name {
+  font-weight: 600;
+}
+
+.hero--verified {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.hero--reaction-head {
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+.hero--reaction {
+  line-height: 1.5;
+}
+
+.hero--quotation {
+  width: 12rem;
+  position: absolute;
+  top: 0;
+  right: 8.6rem;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 1040px) {
+  .hero--grid-container {
+    column-gap: 2rem;
+    row-gap: 2rem;
+    width: 120rem;
+    margin: 3rem;
+  }
+
+  .hero--container {
+    gap: 1rem;
+    padding: 2.6rem;
+  }
+
+  .hero--img-name-container {
+    gap: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 896px) {
+  main {
+    position: relative;
+    height: auto;
+  }
+
+  .hero--grid-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 340px;
+  }
+
+  .hero--quotation {
+    width: 10rem;
+    position: absolute;
+    top: 0;
+    right: 2.6rem;
+    z-index: -1;
+  }
+}
